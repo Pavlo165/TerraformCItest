@@ -6,13 +6,13 @@ terraform {
       version  = "3.43.0"
     }
   }
-  cloud { 
-    
-    organization = "PersonalUse165" 
+  cloud {
 
-    workspaces { 
-      name = "TerraformCI" 
-    } 
+    organization = "PersonalUse165"
+
+    workspaces {
+      name = "TerraformCI"
+    }
   }
 }
 
@@ -22,9 +22,9 @@ provider "azurerm" {
 }
 
 resource "random_string" "uniquestring" {
-  length           = 20
-  special          = false
-  upper            = false
+  length  = 20
+  special = false
+  upper   = false
 }
 
 resource "azurerm_resource_group" "rg" {
